@@ -1,4 +1,4 @@
-## Minimal Docker Tomcat image based on Alpine Linux.
+## Minimal Tomcat image based on Alpine Linux.
 
 Built on [jeanblanchard/docker-tomcat](https://github.com/jeanblanchard/docker-tomcat).
 
