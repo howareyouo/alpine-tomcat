@@ -12,4 +12,4 @@ RUN apk --update add git && \
     mv apache-maven-3.3.9/ ${MAVEN_HOME}
 
 # Launch Tomcat on startup
-CMD ["${CATALINA_HOME}/bin/catalina.sh", "run"]
+CMD ${CATALINA_HOME}/bin/catalina.sh run
