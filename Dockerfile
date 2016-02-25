@@ -9,7 +9,4 @@ RUN apk --update add git && \
     wget http://mirrors.cnnic.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz && \
     tar -zxf apache-maven-3.3.9-bin.tar.gz && \
     rm -rf apache-maven-3.3.9-bin.tar.gz /var/cache/apk/* && \
-    mv apache-maven-3.3.9/ /usr/lib/maven
-
-# Launch Tomcat on startup
-CMD ${CATALINA_HOME}/bin/catalina.sh run
+    mv apache-maven-3.3.9/ ${MAVEN_HOME}
