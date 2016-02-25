@@ -5,8 +5,8 @@ ENV MAVEN_HOME /opt/maven
 ENV PATH ${PATH}:${MAVEN_HOME}/bin
 
 # install git and maven
-RUN apk --update add git && \
-    wget http://mirrors.cnnic.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz && \
-    tar -zxf apache-maven-3.3.9-bin.tar.gz && \
-    rm -rf apache-maven-3.3.9-bin.tar.gz /var/cache/apk/* && \
-    mv apache-maven-3.3.9 ${MAVEN_HOME}
+RUN RUN apk --uupdate add git && \
+    curl -kLS http://mirrors.cnnic.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz \
+    | tar -zx -C /opt && \
+    rm -rf /var/cache/apk/* && \
+    mv /opt/apache-maven-3.3.9 ${MAVEN_HOME}
