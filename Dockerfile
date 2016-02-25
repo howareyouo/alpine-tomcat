@@ -11,3 +11,4 @@ RUN apk --update add git && \
     rm -rf apache-maven-3.3.9-bin.tar.gz /var/cache/apk/* && \
     mv apache-maven-3.3.9/ ${MAVEN_HOME}
 
+CMD ["mvn", "-v"]
